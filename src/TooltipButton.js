@@ -8,7 +8,7 @@ import './TooltipButton.css'
 
 class TooltipButton extends React.Component{
     static defaultProps = {
-        disabled: false,
+        disabled: true,
         title: '',
         tooltipText: '',
         tooltipId: 'tt1',
@@ -17,11 +17,12 @@ class TooltipButton extends React.Component{
     }
 
     render(){
+        const {disabled, title, tooltipText, tooltipId, tooltipPlacement, renderedButton, ...rest} = this.props
         return (
             <OverlayTrigger placement={this.props.tooltipPlacement} delayHide={150}
                             overlay={<Tooltip id={this.props.tooltipId}>{this.props.tooltipText}</Tooltip>}>
                 <div className="tooltip-button-helper">
-                    {this.props.renderedButton? this.props.renderedButton : (<Button {...this.props} disabled>{this.props.title}</Button>)}
+                    {this.props.renderedButton? this.props.renderedButton : (<Button {...rest} disabled={this.props.disabled}>{this.props.title}</Button>)}
                 </div>
             </OverlayTrigger>
         );

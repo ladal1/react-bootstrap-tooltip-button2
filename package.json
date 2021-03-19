@@ -5,8 +5,8 @@
   "main": "lib/TooltipButton.js",
   "author": "Ladislav Louka",
   "contributors": {
-	"name": "Dennis Bemmann",
-	"url": "git@github.com:pastaclub/react-bootstrap-tooltip-button"
+    "name": "Dennis Bemmann",
+    "url": "git@github.com:pastaclub/react-bootstrap-tooltip-button"
   },
   "license": "MIT",
   "repository": {
