@@ -1,0 +1,61 @@
+.tooltip-button-helper {
+  // intended styling for helper div itself
+
+  display: inline-block;
+  vertical-align: top;
+  cursor: not-allowed;
+  width: 100%;
+
+  // disable events on button
+
+  button {
+    width: 100%;
+    pointer-events: none;
+  }
+  // fix styling of buttons in ButtonGroups and ButtonToolbars which got broken by inserting another div
+
+  .btn-group-vertical > &,
+  .btn-group > & {
+    float: left;
+    position: relative;
+  }
+  .btn-toolbar & {
+    float: left;
+  }
+  .btn-toolbar > & {
+    margin-left: 5px;
+  }
+  //Horizontal
+  .btn-group > &:first-child:not(:last-child) > .btn:not(.dropdown-toggle),
+  .btn-group > &:not(:last-child):not(:first-child) > .btn,{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  .btn-group > &:last-child:not(:first-child) > .btn,
+  .btn-group > &:not(:last-child):not(:first-child) > .btn,
+  .btn-group > &:not(:first-child) > .dropdown-toggle {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  //Vertical
+  .btn-group-vertical > &:first-child:not(:last-child) > .btn:not(.dropdown-toggle),
+  .btn-group-vertical > &:not(:last-child):not(:first-child) > .btn{
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .btn-group-vertical > &:last-child:not(:first-child) > .btn,
+  .btn-group-vertical > &:not(:last-child):not(:first-child) > .btn,
+  .btn-group-vertical > &:not(:first-child) > .dropdown-toggle {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+
+  .btn-group .btn + &,
+  .btn-group & + .btn,
+  .btn-group & + &,
+  .btn-group & + .btn-group,
+  .btn-group .btn-group + & {
+    margin-left: -1px;
+  }
+}
