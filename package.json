@@ -1,6 +1,6 @@
 {
   "name": "react-bootstrap-tooltip-button2",
-  "version": "1.1.20b",
+  "version": "1.1.20c",
   "description": "React-Bootstrap button with Tooltip when disabled, updated for 2021 - originally by Dennis Bemmann",
   "main": "lib/TooltipButton.js",
   "author": "Ladislav Louka",
@@ -18,7 +18,7 @@
     "compile-sass": "node-sass src --output lib",
     "compile": "npm run compile-js && npm run compile-sass",
     "clean": "rm -r lib",
-    "prepublish": "npm run compile"
+    "prepare": "npm run compile"
   },
   "dependencies": {
     "react": "^16.0.1",
