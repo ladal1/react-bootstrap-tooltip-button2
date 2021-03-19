@@ -8,7 +8,7 @@ import './TooltipButton.css'
 
 class TooltipButton extends React.Component{
     static defaultProps = {
-        disabled: true,
+        disabled: false,
         title: '',
         tooltipText: '',
         tooltipId: 'tt1',
