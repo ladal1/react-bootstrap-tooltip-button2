@@ -17,9 +17,9 @@ class TooltipButton extends React.Component{
     }
 
     render(){
-        const {disabled, title, tooltipText, tooltipId, tooltipPlacement, renderedButton, key,...rest} = this.props
+        const {disabled, title, tooltipText, tooltipId, tooltipPlacement, renderedButton, ...rest} = this.props
         return (
-            <OverlayTrigger key={key} placement={tooltipPlacement} delayHide={150}
+            <OverlayTrigger key="buttonOverlay" placement={tooltipPlacement} delayHide={150}
                             overlay={<Tooltip id={tooltipId}>{tooltipText}</Tooltip>}>
                 <div className="tooltip-button-helper">
                     {this.props.renderedButton? this.props.renderedButton : (<Button {...rest} disabled={disabled}>{title}</Button>)}
