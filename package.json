@@ -4,10 +4,6 @@
   "description": "React-Bootstrap button with Tooltip when disabled, updated for 2021 - originally by Dennis Bemmann",
   "main": "lib/TooltipButton.js",
   "author": "Ladislav Louka",
-  "contributors": {
-    "name": "Dennis Bemmann",
-    "url": "git@github.com:pastaclub/react-bootstrap-tooltip-button"
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
