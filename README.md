@@ -1,4 +1,4 @@
-react-bootstrap-tooltip-button
+react-bootstrap-tooltip-button2
 ==============================
 
 Largely rewritten, but originally made by [pastaclub](https://github.com/pastaclub/react-bootstrap-tooltip-button)
