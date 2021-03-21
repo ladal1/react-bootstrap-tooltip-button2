@@ -13,16 +13,17 @@ class TooltipButton extends React.Component{
         tooltipText: '',
         tooltipId: 'tt1',
         tooltipPlacement:'bottom',
+		buttonClass: '',
         renderedButton: null
     }
 
     render(){
-        const {disabled, title, tooltipText, tooltipId, tooltipPlacement, renderedButton, ...rest} = this.props
+        const {disabled, title, tooltipText, tooltipId, tooltipPlacement, renderedButton, buttonClasses, className, ...rest} = this.props
         return (
             <OverlayTrigger key="buttonOverlay" placement={tooltipPlacement} delayHide={150}
                             overlay={<Tooltip id={tooltipId}>{tooltipText}</Tooltip>}>
-                <div className="tooltip-button-helper">
-                    {this.props.renderedButton? this.props.renderedButton : (<Button {...rest} disabled={disabled}>{title}</Button>)}
+                <div className={"tooltip-button-helper " + className}>
+                    {this.props.renderedButton? this.props.renderedButton : (<Button {...rest} disabled={disabled} className={buttonClass}>{title}</Button>)}
                 </div>
             </OverlayTrigger>
         );

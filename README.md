@@ -29,7 +29,8 @@ In your render function:
 
 Props
 -----
-
+- `className`: is used for the div surrounding the button, this should be used for classes you would apply for normal buttons
+- `buttonClass`: in case you want to apply styling specifically on the button you can use this prop
 - `disabled`: if true, renders a disabled button, otherwise a regular button
 - `title`: the text to appear on the button
 - `tooltipText`: the text to appear in the tooltip
